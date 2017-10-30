@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <parent>
+    <groupId>com.yushanginfo.erp</groupId>
+    <artifactId>yushang-erp-parent</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.yushanginfo.erp</groupId>
+  <artifactId>yushang-erp-product</artifactId>
+  <packaging>jar</packaging>
+  <name>YuShang ERP Product</name>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.yushanginfo.erp</groupId>
+      <artifactId>yushang-erp-core</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.beangle.webmvc</groupId>
+      <artifactId>beangle-webmvc-entity-plugin_2.12</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.beangle.cdi</groupId>
+      <artifactId>beangle-cdi-api_2.12</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.beangle.cache</groupId>
+      <artifactId>beangle-cache-api_2.12</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.google.zxing</groupId>
+      <artifactId>core</artifactId>
+      <version>3.3.1</version>
+    </dependency>
+  </dependencies>
+</project>

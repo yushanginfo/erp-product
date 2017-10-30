@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<cdi>
+  <container name="web">
+    <module class="com.yushanginfo.erp.product.web.DefaultModule"/>
+  </container>
+  <container>
+    <module class="com.yushanginfo.erp.product.web.DaoModule"/>
+  </container>
+</cdi>

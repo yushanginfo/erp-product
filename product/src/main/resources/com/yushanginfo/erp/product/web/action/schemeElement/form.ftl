@@ -1,0 +1,20 @@
+[@b.head/]
+  [@b.toolbar title="方案组成部分" + schemeElement.persisted?string("维护", "新增")]
+    bar.addBack();
+  [/@]
+  [@b.form name="elementForm" action="!save" target="elements" theme="list"]
+    [@b.select label="对应方案" name="schemeElement.scheme.id" items=schemes  value=(schemeElement.scheme.id)! required="true"/]
+    [@b.textfield label="起始" name="schemeElement.startAt" value=schemeElement.startAt required="true" maxlength="20" /]
+    [@b.textfield label="结束" name="schemeElement.endAt" value=schemeElement.endAt required="true" maxlength="20" /]
+    [@b.select label="代码种类" name="schemeElement.codeCategory.id" items=codeCategories   value=(schemeElement.codeCategory.id)! required="false" empty="..."/]
+    
+    [@b.textfield label="固定值" name="schemeElement.literal" value=schemeElement.literal! required="false" maxlength="10"/]
+    [@b.radios label="类型" name="schemeElement.expType" value=(schemeElement.expType.id?string)! required="true" items={'1':'数字','2':'字符'}/]
+    [@b.formfoot]
+      [#if schemeElement.persisted]
+      <input type="hidden" name="schemeElement.id" value="${schemeElement.id}"/>
+      [/#if]
+      [@b.submit value="action.submit"/]
+    [/@]
+  [/@]
+[@b.foot/]
